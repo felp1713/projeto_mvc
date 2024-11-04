@@ -1,0 +1,12 @@
+<%= form_with(model: @product) do |form| %>
+  <%= form.label "Nome do produto" %>
+  <%= form.text_field :name %>
+
+  <%= form.label "Preço do produto" %>
+  <%= form.number_field :price, step: 0.01 %>
+
+  <%= form.label "Quantidade" %>
+  <%= form.number_field :quantity %>
+
+  <%= form.submit "Salvar Novo Produto" %>
+<% end %>

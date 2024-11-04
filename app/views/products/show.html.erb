@@ -1,0 +1,9 @@
+<p> <%= @product.name %> </p>
+<p> <%= @product.price %> </p>
+<p> <%= @product.quantity %> </p>
+<p> <%= @product.created_at %> </p>
+
+<div>
+  <%= link_to "voltar", products_path %>
+  <%= button_to 'Apagar Produto', @product, method: :delete, form: { data: { turbo_confirm: "Tem certeza que deseja apagar este produto?" }} %>
+</div>
